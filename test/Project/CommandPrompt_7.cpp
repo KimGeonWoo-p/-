@@ -436,7 +436,7 @@ BOOL XCOPY(TCHAR* s_File, TCHAR* d_File)
     TCHAR firstFFStr[MAX_PATH];
     HANDLE hFind;
 
-    _stprintf(firstFFStr, _T("%s\\%s"), _T("*"));
+    _stprintf(firstFFStr, _T("%s\\%s"), s_File, _T("*"));
     hFind = FindFirstFile(firstFFStr, &fData);
 
     if(hFind == INVALID_HANDLE_VALUE)
